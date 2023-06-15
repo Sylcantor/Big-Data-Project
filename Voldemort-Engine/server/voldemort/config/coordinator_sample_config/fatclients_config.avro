@@ -1,9 +1,0 @@
-{
-  "test": {
-    "socket_timeout_ms": "1500",
-    "identifier_string": "test",
-    "connection_timeout_ms": "500",
-    "identifier_string": "test"
-  }
-}
-
