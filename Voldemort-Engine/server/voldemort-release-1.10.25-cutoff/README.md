@@ -23,13 +23,7 @@ This command works for Ubuntu-based Linux distributions. For other operating sys
 
 2. Navigate to the directory containing the Voldemort server project.
 
-3. Build the project using the following command:
-
-   ```bash
-   sudo ./gradlew clean jar
-   ```
-
-4. Start the server using the command:
+3. Start the server using the command:
 
    ```bash
    bin/voldemort-server.sh config/single_node_cluster
