@@ -6,6 +6,30 @@ Voldemort server that provides a database service. Clients can connect to this s
 
 - Java JDK 8
 
+## Installing Java JDK
+
+If the sever does not start properly, the Java JDK may not be compatible with the Voldemort server. To install the Java JDK, follow these steps:
+
+1. Open a terminal window.
+
+2. Run the following command to install the Java JDK:
+
+   ```bash
+   sudo apt-get install openjdk-8-jdk
+   ```
+
+3. If you have multiple versions of Java installed, run the following command to select the default version:
+
+   ```bash
+   sudo update-alternatives --config java
+   ```
+
+4. Run the following command to verify the installation:
+
+   ```bash
+   java -version
+   ```
+
 This command works for Ubuntu-based Linux distributions. For other operating systems, please refer to the [official Gradle installation guide](https://gradle.org/install/).
 
 ## How to Build and Run
