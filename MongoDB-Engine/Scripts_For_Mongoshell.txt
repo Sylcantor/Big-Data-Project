@@ -1,0 +1,96 @@
+-- Importer JSON
+
+-- Dans la collection Animal
+mongoimport --db=zooDB --collection=Animal --jsonArray
+--file=/Users/chahanmovsessian/Documents/Cours Programmation/M1/BigData/scriptsJS/ProjetBD/Json/animals.json
+
+-- Dans la collection Enclos
+mongoimport --db=zooDB --collection=Enclos --jsonArray
+--file=/Users/chahanmovsessian/Documents/Cours Programmation/M1/BigData/scriptsJS/ProjetBD/Json/enclos.json
+
+-- Dans la collection Soin
+mongoimport --db=zooDB --collection=Soin --jsonArray
+--file=/Users/chahanmovsessian/Documents/Cours Programmation/M1/BigData/scriptsJS/ProjetBD/Json/soins.json
+
+-- Dans la collection Visiteurs
+mongoimport --db=zooDB --collection=Visiteurs --jsonArray
+--file=/Users/chahanmovsessian/Documents/Cours Programmation/M1/BigData/scriptsJS/ProjetBD/Json/visiteurs.json
+
+-- Dans la collection Ticket
+mongoimport --db=zooDB --collection=Ticket --jsonArray
+--file=/Users/chahanmovsessian/Documents/Cours Programmation/M1/BigData/scriptsJS/ProjetBD/Json/tickets.json
+
+-- Dans la collection Employe
+mongoimport --db=zooDB --collection=Employe --jsonArray
+--file=/Users/chahanmovsessian/Documents/Cours Programmation/M1/BigData/scriptsJS/ProjetBD/Json/employes.json
+
+-- Dans la collection Departement
+mongoimport --db=zooDB --collection=Departement --jsonArray
+--file=/Users/chahanmovsessian/Documents/Cours Programmation/M1/BigData/scriptsJS/ProjetBD/Json/departements.json
+
+
+
+-- Inserer un document dans la collection Animal
+db.Animal.insertOne({ "_id": 900, "AnimName": "Aruba Rattlesnake", "Espece": "Viperidae", "Sexe": "F", "Diet": "Carnivore", "DateNaiss": "2017-04-08", "DateArriv": "2014-09-07", "Poids": 355, "Taille": 18, "Enclos": "Enclos C" })
+
+-- Inserer un document dans la collection Enclos
+db.Enclos.insertOne({
+    "_id": 11,
+    "EncName": "Enclos P",
+    "Capacite": 10,
+    "Taille": 100
+})
+
+-- Modifier un animal pour ajouter des soins
+db.Animal.updateOne({ "_id": 1 }, { $set: { "Soins": [1, 2] } })
+
+-- Modifier un soin pour changer l'id de l'animal soigné
+db.Soin.updateOne({ "_id": 1 }, { $set: { "AnimId": 1 } })
+db.Soin.updateOne({ "_id": 2 }, { $set: { "AnimId": 1 } })
+
+-- Modifier un soin pour changer l'id de l'employé qui a soigné
+db.Soin.updateOne({ "_id": 1 }, { $set: { "EmpId": 1 } })
+
+-- Modifier un employé pour ajouter des soins
+db.Employe.updateOne({ "_id": 1 }, { $set: { "Soins": [1, 2] } })
+
+
+-- Afficher tous les animaux
+db.Animal.find()
+
+-- Afficher tous les animaux qui ont été soignés
+db.Animal.find({ "Soins": { $exists: true } })
+
+-- Afficher tous les animaux arrivés avant 2015
+db.Animal.find({ "DateArriv": { $lt: "2015-01-01" } })
+
+-- Afficher tous les animaux arrivés avant 2015 et qui ont été soignés
+db.Animal.find({ "DateArriv": { $lt: "2015-01-01" }, "Soins": { $exists: true } })
+
+-- Afficher tous les animaux de l'enclos A
+db.Animal.find({ "Enclos": "Enclos A" })
+
+-- Afficher tous les soins effectués sur un animal, ainsi que le detail du soin
+db.Animal.aggregate([
+    { $match: { "_id": 1 } },
+    { $lookup: { from: "Soin", localField: "Soins", foreignField: "_id", as: "Soins" } }
+])
+
+
+-- Afficher tous les visiteurs qui ont acheté un ticket en 2019
+db.Visiteur.find({ "Tickets.DateAchat": { $gte: "2019-01-01", $lt: "2020-01-01" } })
+
+-- Afficher tous les visiteurs qui ont acheté un ticket en 2019 et qui ont plus de 18 ans
+db.Visiteur.find({ "Tickets.DateAchat": { $gte: "2019-01-01", $lt: "2020-01-01" }, "Age": { $gte: 18 } })
+
+-- Afficher tous les employés qui ont soigné un animal
+db.Employe.find({ "Soins": { $exists: true } })
+
+
+
+-- Afficher tous les visiteurs venant de Paris, triés par age croissant, 
+-- puis par nom, ayant visité le zoo en 2018
+db.Visiteur.aggregate([
+    { $match: { "Ville": "Paris", "Tickets.DateAchat": { $gte: "2018-01-01", $lt: "2019-01-01" } } },
+    { $sort: { "Age": 1, "Nom": 1 } }
+])

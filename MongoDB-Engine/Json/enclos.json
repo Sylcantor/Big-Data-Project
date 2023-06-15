@@ -1,0 +1,62 @@
+[{
+        "_id": 1,
+        "EncName": "Enclos A",
+        "Capacite": 1,
+        "Taille": 10
+    },
+    {
+        "_id": 2,
+        "EncName": "Enclos B",
+        "Capacite": 15,
+        "Taille": 50
+    },
+    {
+        "_id": 3,
+        "EncName": "Enclos C",
+        "Capacite": 20,
+        "Taille": 200
+    },
+    {
+        "_id": 4,
+        "EncName": "Enclos D",
+        "Capacite": 30,
+        "Taille": 500
+    },
+    {
+        "_id": 5,
+        "EncName": "Enclos E",
+        "Capacite": 50,
+        "Taille": 1000
+    },
+    {
+        "_id": 6,
+        "EncName": "Enclos F",
+        "Capacite": 100,
+        "Taille": 2000
+    },
+    {
+        "_id": 7,
+        "EncName": "Enclos G",
+        "Capacite": 200,
+        "Taille": 5000
+    },
+    {
+        "_id": 8,
+        "EncName": "Enclos H",
+        "Capacite": 500,
+        "Taille": 10000
+    },
+    {
+        "_id": 9,
+        "EncName": "Enclos I",
+        "Capacite": 1000,
+        "Taille": 20000
+    },
+    {
+        "_id": 10,
+        "EncName": "Enclos J",
+        "Capacite": 2000,
+        "Taille": 50000
+    }
+
+]
