@@ -4,16 +4,7 @@ Voldemort server that provides a database service. Clients can connect to this s
 
 ## Prerequisites
 
-- Java JDK 8 or higher
-- Gradle build tool
-
-## Installing Gradle
-
-If you do not have Gradle installed, you can install it using the following command:
-
-```bash
-sudo apt-get install gradle
-```
+- Java JDK 8
 
 This command works for Ubuntu-based Linux distributions. For other operating systems, please refer to the [official Gradle installation guide](https://gradle.org/install/).
 
