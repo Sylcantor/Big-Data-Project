@@ -13,6 +13,10 @@ This project consists of a Voldemort server and a client that connects to the se
 
 2. Once the server is running, you can compile and run the client. Instructions can be found in the [client README](./client/README.md).
 
+## Video Presentation
+
+A video presentation of this project can be found [here](https://youtu.be/oeOEX8A0tb4).
+
 ## Report
 
 The report for this project can be found [here](./2mcd_conversionMCD_Generation_Objets__ZANAGLIA_MOVSESSIAN_SCORDO_GUIBLIN.pdf).
