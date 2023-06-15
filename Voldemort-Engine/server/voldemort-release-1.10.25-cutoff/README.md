@@ -26,7 +26,7 @@ This command works for Ubuntu-based Linux distributions. For other operating sys
 3. Build the project using the following command:
 
    ```bash
-   ./gradlew clean jar
+   sudo ./gradlew clean jar
    ```
 
 4. Start the server using the command:
