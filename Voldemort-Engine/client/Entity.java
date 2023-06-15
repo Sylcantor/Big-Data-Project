@@ -1,5 +1,4 @@
 import voldemort.client.StoreClient;
-import voldemort.versioning.Versioned;
 
 public abstract class Entity {
     protected transient StoreClient<String, String> client;

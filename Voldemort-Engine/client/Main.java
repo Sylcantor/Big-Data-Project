@@ -4,7 +4,6 @@ import voldemort.client.ClientConfig;
 import voldemort.client.SocketStoreClientFactory;
 import voldemort.client.StoreClient;
 import voldemort.client.StoreClientFactory;
-import voldemort.versioning.Versioned;
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
