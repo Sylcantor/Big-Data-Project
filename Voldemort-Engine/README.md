@@ -4,7 +4,7 @@ This project consists of a Voldemort server and a client that connects to the se
 
 ## Directory Structure
 
-- `server/`: This directory contains the Voldemort server project. Refer to the [server README](./server/voldemort-release-1.10.25-cutoff/README.md) for instructions on how to build and run the server.
+- `server/`: This directory contains the Voldemort server project. Refer to the [server README](./server/voldemort-release-1.10.25-cutoff/README.md) for instructions on how to run the server.
 - `client/`: This directory contains the client project. Refer to the [client README](./client/README.md) for instructions on how to compile and run the client.
 
 ## How to Run the Project
