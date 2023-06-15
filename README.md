@@ -12,3 +12,7 @@ This project is a collaboration between Chahan Movsessian, Paul Zanaglia, Nicola
 1. Choose the project you want to run (Voldemort or MongoDB).
 2. Start the server for the chosen project. Instructions can be found in the corresponding README.
 3. Once the server is running, you can compile and run the client. Instructions can be found in the corresponding README.
+
+## Report comparison between Voldemort and MongoDB
+
+The comparison report for this project can be found [here](./Dossier_Rapport_Comparaison_Travail_ZANAGLIA_MOVSESSIAN_GUIBLIN_SCORDO_1.pdf).
