@@ -7,7 +7,7 @@ This project is a collaboration between Chahan Movsessian, Paul Zanaglia, Nicola
 A video presentation of each engine can be found here:
 - [Voldemort](https://youtu.be/oeOEX8A0tb4)
 - [MongoDB](https://www.youtube.com/watch?v=XprsL5x_o3o&ab_channel=PaulZANAGLIA)
-- 
+
 ## Directory Structure
 
 - `Voldemort/`: This directory contains the Voldemort project. Refer to the [Voldemort README](./Voldemort-Engine/README.md) for instructions on how to build and run the Voldemort server and client.
